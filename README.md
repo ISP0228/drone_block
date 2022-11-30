@@ -8,7 +8,7 @@
 * [https://makecode.microbit.org/](https://makecode.microbit.org/) を開く
 * **新しいプロジェクト** をクリックしてください
 * ギアボタンメニューの中にある **拡張機能** をクリックしてください
-* **https://github.com/aoki-yudai/test-make** を検索してインポートします。
+* **https://github.com/kawalab/steam_drone** を検索してインポートします。
 
 ## このプロジェクトを編集します ![ビルド ステータス バッジ](https://github.com/aoki-yudai/test-make/workflows/MakeCode/badge.svg)
 
@@ -16,7 +16,7 @@ MakeCode でこのリポジトリを編集します。
 
 * [https://makecode.microbit.org/](https://makecode.microbit.org/) を開く
 * **読み込む** をクリックし、 **URLから読み込む...** をクリックしてください
-* **https://github.com/aoki-yudai/test-make** を貼り付けてインポートをクリックしてください
+* **https://github.com/kawalab/steam_drone** を貼り付けてインポートをクリックしてください
 
 ## ブロックのプレビュー
 
