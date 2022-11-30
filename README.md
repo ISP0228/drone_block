@@ -1,5 +1,5 @@
 
-> このページを開く [https://aoki-yudai.github.io/test-make/](https://aoki-yudai.github.io/test-make/)
+> このページを開く [https://github.com/kawalab/steam_drone](https://github.com/kawalab/steam_drone)
 
 ## 拡張機能として使用
 
@@ -10,7 +10,7 @@
 * ギアボタンメニューの中にある **拡張機能** をクリックしてください
 * **https://github.com/kawalab/steam_drone** を検索してインポートします。
 
-## このプロジェクトを編集します ![ビルド ステータス バッジ](https://github.com/aoki-yudai/test-make/workflows/MakeCode/badge.svg)
+## このプロジェクトを編集します ![ビルド ステータス バッジ](https://github.com/kawalab/steam_drone/workflows/MakeCode/badge.svg)
 
 MakeCode でこのリポジトリを編集します。
 
@@ -23,7 +23,7 @@ MakeCode でこのリポジトリを編集します。
 この画像はマスター内の最後のコミットからのブロックコードを示しています。
 このイメージは更新に数分かかる場合があります。
 
-![生成されたブロック](https://github.com/aoki-yudai/test-make/raw/master/.github/makecode/blocks.png)
+![生成されたブロック](https://github.com/kawalab/steam_drone/raw/master/.github/makecode/blocks.png)
 
 #### メタデータ (検索、レンダリングに使用)
 
