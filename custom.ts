@@ -340,14 +340,14 @@ namespace Tello {
     * @param x x -100-100, eg: 0
     * @param y y -100-100, eg: 0
     * @param z z -100-100, eg: 0
-    * @param speed speed 10-100, eg: 0
+    * @param speed speed -100-100, eg: 0
     * @param mid mid 1-8, eg: 0
     */
-    //% block="ミッションパッドへ飛行 | 前後（前が＋） %x 上下（上が＋） %y 左右（左が＋） %z speed %speed"
+    //% block="ミッションパッドへ飛行 | 前後（前が＋） %x 上下（上が＋） %y 左右（左が＋） %z speed %speed  ミッションパッド番号 %mid"
     //% group="ミッションパッド"
-    export function gomid(x: number, y: number, z: number, speed: number , mid: number): void {
+    export function gomid(x: number, y: number, z: number, speed:number, mid: number): void {
         if (flying == 1 && command_enable == 1) {
-            let sendstring = "go=" + x + "=" + z + "=" + y + "=" + speed + "=" + mid
+            let sendstring = "go=" + x + "=" + z + "=" + y + "=" + speed + "=m" + mid
             radio.sendString(sendstring)
             command_enable = 0
         }
