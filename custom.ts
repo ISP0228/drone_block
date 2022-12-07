@@ -397,6 +397,27 @@ namespace Tello {
     }
 
 
+    /**
+   * ドローンが曲線で移動します
+   * @param x1 x1 -100-100, eg: 0
+   * @param y1 y1 -100-100, eg: 0
+   * @param z1 z1 -100-100, eg: 0
+   * @param x2 x2 -100-100, eg: 0
+   * @param y2 y2 -100-100, eg: 0
+   * @param z2 z2 -100-100, eg: 0
+   * @param speed speed -100-100, eg: 0
+   */
+    //% block="曲線飛行 | 前後（前が＋） %x1 上下（上が＋） %y1 左右（左が＋） %z1  前後 %x2 上下 %y2 左右 %z2 speed %speed"
+    //% group="上級者向け"
+    export function curve(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, speed: number): void {
+        if (flying == 1 && command_enable == 1) {
+            let sendstring = "go=" + x1 + "=" + z1 + "=" + y1 + "="+ x2 + "=" + z2 + "=" + y2 + "=" + speed
+            radio.sendString(sendstring)
+            command_enable = 0
+        }
+    }
+
+
 }
 
 let flying = 0
