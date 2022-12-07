@@ -1,15 +1,4 @@
-input.onButtonPressed(Button.A, function () {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
-})
-input.onButtonPressed(Button.B, function () {
-    Tello.fly_or_land()
-})
+Tello.radiosetgroup(22)
 basic.forever(function () {
-    Tello.Setorder(0)
+    Tello.Setorder(1000)
 })

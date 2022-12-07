@@ -330,6 +330,29 @@ namespace Tello {
             command_enable = 0
         }
     }
+
+
+    /**
+    * ミッションパッド検出機能が有効になっている
+    ID1のミッションパッドを検出します。
+    認識に成功すると、ミッションパッド座標系
+    の座標点(100、100、100） までspeed cm / sの速度で直進します
+    * @param x x -100-100, eg: 0
+    * @param y y -100-100, eg: 0
+    * @param z z -100-100, eg: 0
+    * @param speed speed 10-100, eg: 0
+    * @param mid mid 1-8, eg: 0
+    */
+    //% block="ミッションパッドへ飛行 | 前後（前が＋） %x 上下（上が＋） %y 左右（左が＋） %z speed %speed"
+    //% group="ミッションパッド"
+    export function gomid(x: number, y: number, z: number, speed: number , mid: number): void {
+        if (flying == 1 && command_enable == 1) {
+            let sendstring = "go=" + x + "=" + z + "=" + y + "=" + speed + "=" + mid
+            radio.sendString(sendstring)
+            command_enable = 0
+        }
+    }
+
 }
 
 let flying = 0
