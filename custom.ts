@@ -1,8 +1,37 @@
+enum MyEnumX {   
+    //% block="動かさない"
+    NO_X = (0),
+    //% block="前"
+    FOWARD = (50),
+    //% block="後"
+    BACK = (-50),
+}
+
+enum MyEnumY {
+    //% block="動かさない"
+    NO_Y=(0),
+    //% block="上"
+    UP=(50),
+    //% block="下"
+    DOWN=(-50),
+}
+
+enum MyEnumZ {
+    //% block="動かさない"
+    NO_Z = (0),
+    //% block="右"
+    LIGHT = (-50),
+    //% block="左"
+    LEFT = (50)
+}
+
 /**
  * Custom blocks
  */
 //% weight=0 color=#fc4c02 icon="\u26a1"
 //% block="ドローン""
+
+
 namespace Tello {
     /**
      * 通信グループの設定を行う．受信機と送信機のグループ設定は合わせてね
@@ -343,7 +372,7 @@ namespace Tello {
     * @param speed speed -100-100, eg: 0
     * @param mid mid 1-8, eg: 0
     */
-    //% block="ミッションパッドへ飛行 | 前後（前が＋） %x 上下（上が＋） %y 左右（左が＋） %z speed %speed  ミッションパッド番号 %mid"
+    //% block="ミッションパッドへ飛行 | 前後（前が＋） %x 上下（上が＋） %y 左右（左が＋） %z speed %speed ミッションパッド番号 %mid"
     //% group="ミッションパッド"
     export function gomid(x: number, y: number, z: number, speed:number, mid: number): void {
         if (flying == 1 && command_enable == 1) {
@@ -352,6 +381,21 @@ namespace Tello {
             command_enable = 0
         }
     }
+
+
+    /**
+   * ドローンが三次元で移動します(かんたんver)
+   */
+    //% block="自由飛行(かんたん) | 前後 %ex 上下 %ey 左右 %ez"
+    //% group="上級者向け"
+    export function xyz_easy(ex: MyEnumX, ey: MyEnumY, ez: MyEnumZ,): void {
+        if (flying == 1 && command_enable == 1) {
+            let sendstring = "go=" + ex + "=" + ez + "=" + ey + "=60"
+            radio.sendString(sendstring)
+            command_enable = 0
+        }
+    }
+
 
 }
 
