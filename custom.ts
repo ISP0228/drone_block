@@ -411,7 +411,7 @@ namespace Tello {
     //% group="上級者向け"
     export function curve(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, speed: number): void {
         if (flying == 1 && command_enable == 1) {
-            let sendstring = "go=" + x1 + "=" + z1 + "=" + y1 + "="+ x2 + "=" + z2 + "=" + y2 + "=" + speed
+            let sendstring = "curve=" + x1 + "=" + z1 + "=" + y1 + "="+ x2 + "=" + z2 + "=" + y2 + "=" + speed
             radio.sendString(sendstring)
             command_enable = 0
         }
