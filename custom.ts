@@ -372,12 +372,14 @@ namespace Tello {
     * @param speed speed -100-100, eg: 0
     * @param mid mid 1-8, eg: 0
     */
-    //% block="ミッションパッドへ飛行 | 前後（前が＋） %x 上下（上が＋） %y 左右（左が＋） %z speed %speed ミッションパッド番号 %mid"
+    //% block="ミッションパッドへ飛行(現在動作不安定) | 前後（前が＋） %x 上下（上が＋） %y 左右（左が＋） %z speed %speed ミッションパッド番号 %mid"
     //% group="ミッションパッド"
     export function gomid(x: number, y: number, z: number, speed:number, mid: number): void {
         if (flying == 1 && command_enable == 1) {
-            let sendstring = "go=" + x + "=" + z + "=&" + y + "=" + speed + "=m" + mid
+            let sendstring = "go=" + x + "=" + z + "=&"
+            let sendstring2 =  y + "=" + speed + "=m" + mid
             radio.sendString(sendstring)
+            radio.sendString(sendstring2)
             command_enable = 0
         }
     }
@@ -411,8 +413,10 @@ namespace Tello {
     //% group="上級者向け"
     export function curve(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, speed: number): void {
         if (flying == 1 && command_enable == 1) {
-            let sendstring = "curve=" + x1 + "=" + z1 + "=" + y1 + "=&"+ x2 + "=" + z2 + "=" + y2 + "=" + speed
+            let sendstring = "curve=" + x1 + "=" + z1 + "=" + y1 + "=&"
+            let sendstring2 = x2 + "=" + z2 + "=" + y2 + "=" + speed
             radio.sendString(sendstring)
+            radio.sendString(sendstring2)
             command_enable = 0
         }
     }
