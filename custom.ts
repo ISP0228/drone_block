@@ -365,14 +365,14 @@ namespace Tello {
     * ミッションパッド検出機能が有効になっている
     ID1のミッションパッドを検出します。
     認識に成功すると、ミッションパッド座標系
-    の座標点(100、100、100） までspeed cm / sの速度で直進します
+    の座標点(100、100、100） までspeed cm / sの速度で直進します(ドローンコンテストでは使用不可)
     * @param x x -100-100, eg: 0
     * @param y y -100-100, eg: 0
     * @param z z -100-100, eg: 0
     * @param speed speed -100-100, eg: 0
     * @param mid mid 1-8, eg: 0
     */
-    //% block="ミッションパッドへ飛行(現在動作不安定) | 前後（前が＋） %x 上下（上が＋） %y 左右（左が＋） %z speed %speed ミッションパッド番号 %mid"
+    //% block="ミッションパッドへ飛行(ドローンコンテストでは使用不可) | 前後（前が＋） %x 上下（上が＋） %y 左右（左が＋） %z speed %speed ミッションパッド番号 %mid"
     //% group="ミッションパッド"
     export function gomid(x: number, y: number, z: number, speed:number, mid: number): void {
         if (flying == 1 && command_enable == 1) {
@@ -400,7 +400,7 @@ namespace Tello {
 
 
     /**
-   * ドローンが曲線で移動します
+   * ドローンが曲線で移動します(ドローンコンテストでは使用不可)
    * @param x1 x1 -100-100, eg: 0
    * @param y1 y1 -100-100, eg: 0
    * @param z1 z1 -100-100, eg: 0
@@ -409,7 +409,7 @@ namespace Tello {
    * @param z2 z2 -100-100, eg: 0
    * @param speed speed -100-100, eg: 0
    */
-    //% block="曲線飛行 | 前後（前が＋） %x1 上下（上が＋） %y1 左右（左が＋） %z1  前後 %x2 上下 %y2 左右 %z2 speed %speed"
+    //% block="曲線飛行(ドローンコンテストでは使用不可) | 前後（前が＋） %x1 上下（上が＋） %y1 左右（左が＋） %z1  前後 %x2 上下 %y2 左右 %z2 speed %speed"
     //% group="上級者向け"
     export function curve(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, speed: number): void {
         if (flying == 1 && command_enable == 1) {
