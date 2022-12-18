@@ -262,7 +262,7 @@ namespace Tello {
     /**
      * ドローンが前フリップします！おしゃれ！
      */
-    //% block="前フリップする"
+    //% block="前フリップする(バッテリー50以上推奨)"
     //% group="フリップ"
     export function forward_flip(): void {
         if (flying == 1 && command_enable == 1) {
@@ -274,7 +274,7 @@ namespace Tello {
     /**
      * ドローンが後ろフリップします！おしゃれ！
      */
-    //% block="後ろフリップする"
+    //% block="後ろフリップする(バッテリー50以上推奨)"
     //% group="フリップ"
     export function back_flip(): void {
         if (flying == 1 && command_enable == 1) {
@@ -286,7 +286,7 @@ namespace Tello {
     /**
      * ドローンが左フリップします！おしゃれ！
      */
-    //% block="左フリップする"
+    //% block="左フリップする(バッテリー50以上推奨)"
     //% group="フリップ"
     export function left_flip(): void {
         if (flying == 1 && command_enable == 1) {
@@ -298,7 +298,7 @@ namespace Tello {
     /**
      * ドローンが右フリップします！おしゃれ！
      */
-    //% block="右フリップする"
+    //% block="右フリップする(バッテリー50以上推奨)"
     //% group="フリップ"
     export function right_flip(): void {
         if (flying == 1 && command_enable == 1) {
