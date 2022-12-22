@@ -47,7 +47,7 @@ namespace Tello {
      * スピードの設定を行う、10~100の間で設定する、1につき1cm進む！
      * @param スピードの設定を行う value 10-100, eg: 10
      */
-    //% block="スピードを設定する %value"
+    //% block="スピードを設定する(20~40を推奨:初期値は30) %value"
     //% group="設定"
     export function Setspped(value: number): void {
         radio.sendString("speed=" + value)
