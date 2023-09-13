@@ -311,6 +311,25 @@ namespace Tello {
     }
 
     /**
+     * カメラを切り替える
+     */
+    //% block="カメラを切り替える "
+    //% group="上級者向け"
+    export function swiching_camera(): void {
+        if (flying == 1 && command_enable == 1) {
+            if (camera == 1) {
+                radio.sendString("downvision 0")
+                camera = 0
+                command_enable = 0
+            } else {
+                radio.sendString("downvision 1")
+                camera = 1
+                command_enable = 0
+            }
+        }
+    }
+
+    /**
     * ドローンが三次元で移動します
     * @param x x -100-100, eg: 0
     * @param y y -100-100, eg: 0
@@ -429,3 +448,4 @@ namespace Tello {
 
 let flying = 0
 let command_enable = 1
+let camera = 0
